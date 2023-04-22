@@ -4,7 +4,7 @@ class FeatureEncoder:
     def __init__(self) -> None:
         self.database:dict = {}
 
-    def run(self, path, features)->bool:
+    def run(self, path, features):
         keypoints = []
         for p in features["keypoint2d"]:
             keypoints.append(
@@ -23,7 +23,7 @@ class FeatureEncoder:
                 "descriptor2d": features["descriptor2d"]
             }
     
-    def save(self, save_path):    
+    def save(self, save_path)->bool:    
         with open(save_path, mode="wb") as file:
             success = pickle.dump(self.database, file)
         return success
