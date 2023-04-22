@@ -13,6 +13,7 @@ def encode_main():
     encoder.save("database.pickle")
 
 def decode_main():
+    # Check
     decoder = FeatureDecoder()
     feat_database:dict = decoder.run('database.pickle')
     feat_db_idx0 = list(feat_database.keys())[0]
@@ -22,9 +23,12 @@ def decode_main():
                                  outImage=None,
                                  color=(0,1,0),
                                  flags=cv2.DrawMatchesFlags_DRAW_RICH_KEYPOINTS)
-    
-    raise
+    cv2.imshow("draw_keypoints", drawkpts)
+    cv2.waitKey(0); cv2.destroyAllWindows()
 
 if __name__ == '__main__':
-    # encode_main()
-    decode_main()
+    user_input = input("Encode[1] or Decode[2]?\n")
+    if int(user_input) == 1:
+        encode_main()
+    if int(user_input) == 2:
+        decode_main()
