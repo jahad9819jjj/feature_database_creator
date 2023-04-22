@@ -1,5 +1,11 @@
 # feature_database_creator
 
+## What is this?
+In feature detection, while maintaining the accuracy of the feature detector, it is inefficient to detect every database image in real time.
+
+Therefore, the following program is designed to create a database of feature values.
+
+
 ## Usage
 ### Prepare dataset
 Download the dataset for feature extraction in the following structure:
