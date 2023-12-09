@@ -1,0 +1,6 @@
+*.pickle
+data/*
+*pycache*
+*DS_Store*
+*.swp*
+download.sh
